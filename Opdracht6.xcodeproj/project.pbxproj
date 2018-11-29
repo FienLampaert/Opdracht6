@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F07E9D021AFDC14007B8B3E /* RegistratieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9CF21AFDC14007B8B3E /* RegistratieViewController.swift */; };
+		3F07E9D221AFDC21007B8B3E /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9D121AFDC21007B8B3E /* Member.swift */; };
+		3F07E9D421AFDC2C007B8B3E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9D321AFDC2C007B8B3E /* Article.swift */; };
+		3F07E9D621AFDC35007B8B3E /* Bod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9D521AFDC35007B8B3E /* Bod.swift */; };
+		3F07E9DA21AFDDC2007B8B3E /* AuthenticationUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9D921AFDDC2007B8B3E /* AuthenticationUser.swift */; };
+		3F07E9DD21AFE2A7007B8B3E /* MemberDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9DC21AFE2A7007B8B3E /* MemberDAO.swift */; };
+		3F07E9DF21AFE2B1007B8B3E /* ArticleDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9DE21AFE2B1007B8B3E /* ArticleDAO.swift */; };
+		3F07E9E121AFE2BB007B8B3E /* BodDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9E021AFE2BB007B8B3E /* BodDAO.swift */; };
 		3F124B9C21AE8EE800EEDF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F124B9B21AE8EE800EEDF0D /* AppDelegate.swift */; };
 		3F124B9E21AE8EE800EEDF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F124B9D21AE8EE800EEDF0D /* ViewController.swift */; };
 		3F124BA121AE8EE800EEDF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F124B9F21AE8EE800EEDF0D /* Main.storyboard */; };
@@ -18,6 +26,14 @@
 
 /* Begin PBXFileReference section */
 		25FAFCA225316BD18FFEC5F9 /* Pods_Opdracht6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Opdracht6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F07E9CF21AFDC14007B8B3E /* RegistratieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistratieViewController.swift; sourceTree = "<group>"; };
+		3F07E9D121AFDC21007B8B3E /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		3F07E9D321AFDC2C007B8B3E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		3F07E9D521AFDC35007B8B3E /* Bod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bod.swift; sourceTree = "<group>"; };
+		3F07E9D921AFDDC2007B8B3E /* AuthenticationUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUser.swift; sourceTree = "<group>"; };
+		3F07E9DC21AFE2A7007B8B3E /* MemberDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDAO.swift; sourceTree = "<group>"; };
+		3F07E9DE21AFE2B1007B8B3E /* ArticleDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDAO.swift; sourceTree = "<group>"; };
+		3F07E9E021AFE2BB007B8B3E /* BodDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodDAO.swift; sourceTree = "<group>"; };
 		3F124B9821AE8EE800EEDF0D /* Opdracht6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opdracht6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F124B9B21AE8EE800EEDF0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F124B9D21AE8EE800EEDF0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +67,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3F07E9D721AFDC47007B8B3E /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				3F07E9DC21AFE2A7007B8B3E /* MemberDAO.swift */,
+				3F07E9DE21AFE2B1007B8B3E /* ArticleDAO.swift */,
+				3F07E9E021AFE2BB007B8B3E /* BodDAO.swift */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		3F07E9D821AFDD62007B8B3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F07E9D121AFDC21007B8B3E /* Member.swift */,
+				3F07E9D321AFDC2C007B8B3E /* Article.swift */,
+				3F07E9D521AFDC35007B8B3E /* Bod.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3F124B8F21AE8EE800EEDF0D = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +108,8 @@
 		3F124B9A21AE8EE800EEDF0D /* Opdracht6 */ = {
 			isa = PBXGroup;
 			children = (
+				3F07E9D821AFDD62007B8B3E /* Models */,
+				3F07E9D721AFDC47007B8B3E /* DAO */,
 				3FD3C41F21AE930B00D1FB7F /* GoogleService-Info.plist */,
 				3F124B9B21AE8EE800EEDF0D /* AppDelegate.swift */,
 				3F124B9D21AE8EE800EEDF0D /* ViewController.swift */,
@@ -79,6 +117,8 @@
 				3F124BA221AE8EE900EEDF0D /* Assets.xcassets */,
 				3F124BA421AE8EE900EEDF0D /* LaunchScreen.storyboard */,
 				3F124BA721AE8EE900EEDF0D /* Info.plist */,
+				3F07E9CF21AFDC14007B8B3E /* RegistratieViewController.swift */,
+				3F07E9D921AFDDC2007B8B3E /* AuthenticationUser.swift */,
 			);
 			path = Opdracht6;
 			sourceTree = "<group>";
@@ -217,7 +257,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F124B9E21AE8EE800EEDF0D /* ViewController.swift in Sources */,
+				3F07E9DA21AFDDC2007B8B3E /* AuthenticationUser.swift in Sources */,
 				3F124B9C21AE8EE800EEDF0D /* AppDelegate.swift in Sources */,
+				3F07E9D021AFDC14007B8B3E /* RegistratieViewController.swift in Sources */,
+				3F07E9E121AFE2BB007B8B3E /* BodDAO.swift in Sources */,
+				3F07E9D621AFDC35007B8B3E /* Bod.swift in Sources */,
+				3F07E9D221AFDC21007B8B3E /* Member.swift in Sources */,
+				3F07E9DF21AFE2B1007B8B3E /* ArticleDAO.swift in Sources */,
+				3F07E9DD21AFE2A7007B8B3E /* MemberDAO.swift in Sources */,
+				3F07E9D421AFDC2C007B8B3E /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

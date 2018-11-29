@@ -10,7 +10,26 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
-
+    let authUser = AuthenticationUser()
+    
+    @IBOutlet var txtEmail: UITextField!
+    @IBOutlet var txtPassword: UITextField!
+    
+    @IBAction func btnAanmelden(_ sender: Any) {
+        let email = txtEmail.text
+        let wachtwoord = txtPassword.text
+        var correct: Bool = false
+        
+        if(email != nil && wachtwoord != nil) {
+            correct = authUser.login(email: email!, wachtwoord: wachtwoord!)
+        }
+        
+        if(correct == true) {
+            //self.navigationController?.pushViewController(UIViewController, animated: true)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
