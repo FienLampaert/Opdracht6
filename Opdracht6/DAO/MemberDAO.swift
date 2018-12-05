@@ -13,19 +13,5 @@ class MemberDAO {
     //final FirebaseDatabase database = FirebaseDatabase.getInstance()
     //let db = Database.database().referenc()
     
-    func registreren(email: String, wachtwoord: String, geboortedatum: String) {
-        
-        Auth.auth().createUser(withEmail: email, password: wachtwoord, completion: { (user, error) in
-            var text: String
-            if error != nil {
-                text = "Error"
-            }
-            else {
-                text = "Succesvol"
-            }
-            
-        })
-        
-        
-    }
+    
 }
