@@ -8,12 +8,11 @@
 
 import Foundation
 import Firebase
+import FirebaseFirestore
 
 class ArticleDAO {
     
-    FirebaseApp.configure()
-    
-    let db = Firestroe.firestore()
+    let db = Firestore.firestore()
     
     func getAllArticles() {
         db.collection("Articles").getDocument() { (querySnapshot, err) in
