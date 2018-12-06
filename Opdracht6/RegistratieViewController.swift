@@ -50,7 +50,7 @@ class RegistratieViewController: UIViewController, RegistrationValidationProtoco
     
     func registrationCompleted(login: Login?, error: String?) {
         lblError.text = error
-        MemberDAO.createUser(login)
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import Firebase
+
+class ArticleDAO {
+    
+    FirebaseApp.configure()
+    
+    let db = Firestroe.firestore()
+    
+    func getAllArticles() {
+        db.collection("Articles").getDocument() { (querySnapshot, err) in
+            
+        }
+    }
+}

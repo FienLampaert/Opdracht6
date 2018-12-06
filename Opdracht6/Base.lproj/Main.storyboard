@@ -83,10 +83,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvw-fL-Y2o">
+                                <rect key="frame" x="74" y="1275" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="0.041046944600000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.71592443149999996" blue="0.66942990459999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="an5-BF-6lV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="227" id="23G-tB-spM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xvw-fL-Y2o" secondAttribute="bottom" constant="41" id="4Yg-yN-dsT"/>
                             <constraint firstItem="Qqi-x0-zQz" firstAttribute="top" secondItem="TkR-K8-ml7" secondAttribute="bottom" constant="48" id="A0M-ul-orw"/>
                             <constraint firstItem="TkR-K8-ml7" firstAttribute="leading" secondItem="yTj-yb-0gp" secondAttribute="trailing" constant="147" id="BNV-vu-Vya"/>
                             <constraint firstItem="an5-BF-6lV" firstAttribute="top" secondItem="yTj-yb-0gp" secondAttribute="bottom" constant="52" id="C1Q-tv-j8e"/>
@@ -96,6 +103,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ehB-1H-91i" secondAttribute="bottom" constant="29" id="UHB-E3-4py"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qqi-x0-zQz" secondAttribute="trailing" constant="208" id="Wmn-C2-a27"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ehB-1H-91i" secondAttribute="trailing" constant="42" id="XLF-f9-VIE"/>
+                            <constraint firstItem="xvw-fL-Y2o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="cxO-Oq-Dya"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TkR-K8-ml7" secondAttribute="trailing" constant="208" id="dwB-4J-niT"/>
                             <constraint firstItem="val-uz-EU7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="fQh-Dk-cpR"/>
                             <constraint firstItem="TkR-K8-ml7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="399" id="lNg-3t-xLr"/>
@@ -109,6 +117,7 @@
                     <navigationItem key="navigationItem" id="RBq-Ef-S7v"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="lblError" destination="xvw-fL-Y2o" id="xaV-mk-qow"/>
                         <outlet property="txtEmail" destination="TkR-K8-ml7" id="c3r-Ok-pDh"/>
                         <outlet property="txtPassword" destination="Qqi-x0-zQz" id="CAq-0Y-3oX"/>
                     </connections>

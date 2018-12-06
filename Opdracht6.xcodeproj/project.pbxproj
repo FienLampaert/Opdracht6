@@ -19,6 +19,7 @@
 		3F124BA121AE8EE800EEDF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F124B9F21AE8EE800EEDF0D /* Main.storyboard */; };
 		3F124BA321AE8EE900EEDF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F124BA221AE8EE900EEDF0D /* Assets.xcassets */; };
 		3F124BA621AE8EE900EEDF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F124BA421AE8EE900EEDF0D /* LaunchScreen.storyboard */; };
+		3F292CD121B9212D0024F243 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F292CD021B9212D0024F243 /* TableViewController.swift */; };
 		3F39FE4721B7C065006944A9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4621B7C065006944A9 /* Login.swift */; };
 		3F39FE4921B7C220006944A9 /* RegistrationValidtion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4821B7C220006944A9 /* RegistrationValidtion.swift */; };
 		3F39FE4B21B7C25D006944A9 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4A21B7C25D006944A9 /* LoginValidation.swift */; };
@@ -44,6 +45,7 @@
 		3F124BA221AE8EE900EEDF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F124BA521AE8EE900EEDF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F124BA721AE8EE900EEDF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F292CD021B9212D0024F243 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3F39FE4621B7C065006944A9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3F39FE4821B7C220006944A9 /* RegistrationValidtion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidtion.swift; sourceTree = "<group>"; };
 		3F39FE4A21B7C25D006944A9 /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				3F39FE4A21B7C25D006944A9 /* LoginValidation.swift */,
 				3F39FE4C21B7C7B8006944A9 /* RegistrationValidationProtocol.swift */,
 				3F39FE4E21B7C863006944A9 /* LoginValidationProtocol.swift */,
+				3F292CD021B9212D0024F243 /* TableViewController.swift */,
 			);
 			path = Opdracht6;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				3F124B9521AE8EE800EEDF0D /* Frameworks */,
 				3F124B9621AE8EE800EEDF0D /* Resources */,
 				2B73EE02152257E2D6DD697A /* [CP] Embed Pods Frameworks */,
+				23BC61CECB534A9B4C562468 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +217,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		23BC61CECB534A9B4C562468 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Opdracht6/Pods-Opdracht6-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Opdracht6/Pods-Opdracht6-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2B73EE02152257E2D6DD697A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,16 +248,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Opdracht6/Pods-Opdracht6-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +317,7 @@
 				3F39FE4F21B7C863006944A9 /* LoginValidationProtocol.swift in Sources */,
 				3F39FE4721B7C065006944A9 /* Login.swift in Sources */,
 				3F07E9D421AFDC2C007B8B3E /* Article.swift in Sources */,
+				3F292CD121B9212D0024F243 /* TableViewController.swift in Sources */,
 				3F39FE4921B7C220006944A9 /* RegistrationValidtion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

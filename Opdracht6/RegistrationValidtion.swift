@@ -9,8 +9,6 @@
 import Foundation
 import FirebaseAuth
 
-
-
 class RegistrationValidation {
     
     /*
@@ -36,51 +34,63 @@ class RegistrationValidation {
                 if(!password.isEmpty){
                     if(!passwordValidation.isEmpty){
                         if(password == passwordValidation) {
-                            var ouderDan18 = 19
-                            if(ouderDan18 >= 18) {
+                            var leeftijd = 19
+                            if(leeftijd >= 18) {
                                 login = Login(email: email, password: password)
-                                 createUser(login, listener)
+                                self.createUser(login: login!, listener: listener)
                             }
                             else {
                                 error = "Je moet ouder dan 18 jaar zijn."
+                                listener.registrationCompleted(login: login, error: error)
                             }
                         }
                         else {
                             error = "Wachtwoord en wachtwoord bevestigen zijn niet gelijk aan elkaar."
+                            listener.registrationCompleted(login: login, error: error)
                         }
                     }
                     else {
                         error = "Het wachtwoord bevestigen werd niet ingevuld."
+                        listener.registrationCompleted(login: login, error: error)
                     }
                 }
                 else {
                     error = "Het wachtwoord werd niet ingevuld."
+                    listener.registrationCompleted(login: login, error: error)
                 }
             }
             else {
                 error = "Het emailadres werd niet ingevuld."
+                listener.registrationCompleted(login: login, error: error)
             }
             
         }else {
             error = "De naam werd niet ingevuld."
+            listener.registrationCompleted(login: login, error: error)
         }
+        
+        
         
     }
     
-    func createUser(login: Login, listener: RegistrationValidationProtocol) {
+    static func createUser(login: Login, listener: RegistrationValidationProtocol) {
         
         let email = login.getEmail()
         let wachtwoord = login.getPassword()
         
-        Auth.auth().createUser(withEmail: email, password: wachtwoord, completion: { (authResult, error) in
+        Auth.auth().createUser(withEmail: email, password: wachtwoord) { (authResult, error) in
             
-            listener.registrationCompleted(login: login, error: error)
+            if(error == nil) {
+                 listener.registrationCompleted(login: login, error: "Succesvol geregistreerd")
+            }
+            else {
+                 listener.registrationCompleted(login: login, error: error!.localizedDescription)
+            }
+           
             //return (authResult, error)
             
-        })
-        
-        
-        
+            guard let user = authResult?.user else { return }
+        }
     }
     
 }

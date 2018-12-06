@@ -10,8 +10,6 @@ import Foundation
 import FirebaseAuth
 
 class MemberDAO {
-    //final FirebaseDatabase database = FirebaseDatabase.getInstance()
-    //let db = Database.database().referenc()
-    
+
     
 }
