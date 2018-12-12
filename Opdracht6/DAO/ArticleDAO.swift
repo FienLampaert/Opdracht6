@@ -14,9 +14,15 @@ class ArticleDAO {
     
     let db = Firestore.firestore()
     
-    func getAllArticles() {
-        db.collection("Articles").getDocument() { (querySnapshot, err) in
-            
+    func getAllArticles(listener: tableProtocol) {
+        db.collection("Aricles").getDocuments() { (querySnapshot, err) in
+            var documentsArray = [QueryDocumentSnapshot]()
+            if(err == nil) {
+                for i in (querySnapshot?.documents)! {
+                    documentsArray.append(i)
+                }
+                listener.articles(documentsArray: documentsArray)
+            }
         }
     }
 }

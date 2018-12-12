@@ -50,7 +50,7 @@ class RegistratieViewController: UIViewController, RegistrationValidationProtoco
     
     func registrationCompleted(login: Login?, error: String?) {
         lblError.text = error
-        
+        // (self.navigationController?.viewControllers[0] as! ViewController).setLogin(login: login!)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

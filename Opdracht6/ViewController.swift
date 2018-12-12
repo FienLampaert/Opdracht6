@@ -39,7 +39,8 @@ class ViewController: UIViewController, LoginValidationProtocol {
         lblError.text = error
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableVC")
-        self.present(vc!, animated: true, completion: nil)
+        //self.present(vc!, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     override func viewDidLoad() {

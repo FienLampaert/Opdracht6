@@ -19,6 +19,8 @@
 		3F124BA121AE8EE800EEDF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F124B9F21AE8EE800EEDF0D /* Main.storyboard */; };
 		3F124BA321AE8EE900EEDF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F124BA221AE8EE900EEDF0D /* Assets.xcassets */; };
 		3F124BA621AE8EE900EEDF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F124BA421AE8EE900EEDF0D /* LaunchScreen.storyboard */; };
+		3F26CC9C21C0FB320011DAA0 /* tableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26CC9B21C0FB320011DAA0 /* tableProtocol.swift */; };
+		3F26CC9E21C10B890011DAA0 /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F26CC9D21C10B890011DAA0 /* cell.swift */; };
 		3F292CD121B9212D0024F243 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F292CD021B9212D0024F243 /* TableViewController.swift */; };
 		3F39FE4721B7C065006944A9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4621B7C065006944A9 /* Login.swift */; };
 		3F39FE4921B7C220006944A9 /* RegistrationValidtion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4821B7C220006944A9 /* RegistrationValidtion.swift */; };
@@ -45,6 +47,8 @@
 		3F124BA221AE8EE900EEDF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F124BA521AE8EE900EEDF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F124BA721AE8EE900EEDF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F26CC9B21C0FB320011DAA0 /* tableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableProtocol.swift; sourceTree = "<group>"; };
+		3F26CC9D21C10B890011DAA0 /* cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
 		3F292CD021B9212D0024F243 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3F39FE4621B7C065006944A9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3F39FE4821B7C220006944A9 /* RegistrationValidtion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidtion.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				3F39FE4C21B7C7B8006944A9 /* RegistrationValidationProtocol.swift */,
 				3F39FE4E21B7C863006944A9 /* LoginValidationProtocol.swift */,
 				3F292CD021B9212D0024F243 /* TableViewController.swift */,
+				3F26CC9B21C0FB320011DAA0 /* tableProtocol.swift */,
+				3F26CC9D21C10B890011DAA0 /* cell.swift */,
 			);
 			path = Opdracht6;
 			sourceTree = "<group>";
@@ -306,12 +312,14 @@
 			files = (
 				3F124B9E21AE8EE800EEDF0D /* ViewController.swift in Sources */,
 				3F124B9C21AE8EE800EEDF0D /* AppDelegate.swift in Sources */,
+				3F26CC9E21C10B890011DAA0 /* cell.swift in Sources */,
 				3F07E9D021AFDC14007B8B3E /* RegistratieViewController.swift in Sources */,
 				3F07E9E121AFE2BB007B8B3E /* BodDAO.swift in Sources */,
 				3F39FE4B21B7C25D006944A9 /* LoginValidation.swift in Sources */,
 				3F07E9D621AFDC35007B8B3E /* Bod.swift in Sources */,
 				3F07E9D221AFDC21007B8B3E /* Member.swift in Sources */,
 				3F07E9DF21AFE2B1007B8B3E /* ArticleDAO.swift in Sources */,
+				3F26CC9C21C0FB320011DAA0 /* tableProtocol.swift in Sources */,
 				3F07E9DD21AFE2A7007B8B3E /* MemberDAO.swift in Sources */,
 				3F39FE4D21B7C7B8006944A9 /* RegistrationValidationProtocol.swift in Sources */,
 				3F39FE4F21B7C863006944A9 /* LoginValidationProtocol.swift in Sources */,

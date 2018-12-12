@@ -7,22 +7,34 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, tableProtocol {
     let articleDAO = ArticleDAO()
     
-    var arrayArticle: [String] = []
+    var arrayArticles = [Article]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        articleDAO.getAllArticles()
+        articleDAO.getAllArticles(listener: self)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    func articles(documentsArray: [QueryDocumentSnapshot]) {
+        for i in documentsArray {
+            let value = i.value(forKey: description)
+            
+            var article = Article(description: "Test", minBid: 200)
+            // article.setDescription
+            arrayArticles.append(article)
+        }
     }
 
     // MARK: - Table view data source
@@ -34,18 +46,18 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrayArticles.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! cell
+        
+        //
+        let x = arrayArticles[indexPath.row]
+        cell.descriptionTitle.text = x.getDescription()
+        cell.bidSubtitle.text = "\(x.getMinBid())"
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

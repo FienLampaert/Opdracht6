@@ -7,3 +7,39 @@
 //
 
 import Foundation
+
+class Member {
+    var username: String
+    var password: String
+    var birthdate: Date
+    
+    init(username: String, password: String, birthdate: Date) {
+        self.username = username
+        self.password = password
+        self.birthdate = birthdate
+    }
+    
+    func getUsername() -> String{
+        return username
+    }
+    
+    func setUsername(username: String) {
+        self.username = username
+    }
+    
+    func getPassword() -> String {
+        return password
+    }
+    
+    func setPassword(password: String) {
+        self.password = password
+    }
+    
+    func getBirthdate() -> Date {
+        return birthdate
+    }
+    
+    func setBirthdate(birthdate: Date) {
+        self.birthdate = birthdate
+    }
+}
