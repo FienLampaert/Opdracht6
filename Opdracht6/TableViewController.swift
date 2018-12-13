@@ -11,7 +11,10 @@ import Firebase
 import FirebaseFirestore
 
 class TableViewController: UITableViewController, tableProtocol {
+    
+    
     let articleDAO = ArticleDAO()
+    let bodDAO = BodDAO()
     
     var arrayArticles = [Article]()
 
@@ -27,13 +30,22 @@ class TableViewController: UITableViewController, tableProtocol {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func articles(documentsArray: [QueryDocumentSnapshot]) {
-        for i in documentsArray {
-            let value = i.value(forKey: description)
-            
-            var article = Article(description: "Test", minBid: 200)
-            // article.setDescription
-            arrayArticles.append(article)
+    func articles(articles: [Article]) {
+        arrayArticles.removeAll()
+        for i in articles {
+            arrayArticles.append(i)
+           
+        }
+         self.tableView.reloadData()
+        
+        for i in arrayArticles {
+            bodDAO.getAllBidsForAticle(article: i, listener: self)
+        }
+    }
+    
+    func bids(bids: [Bod]) {
+        for i in bids {
+            arrayArticles[0].addBid(bid: i)
         }
     }
 
@@ -41,7 +53,7 @@ class TableViewController: UITableViewController, tableProtocol {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +67,12 @@ class TableViewController: UITableViewController, tableProtocol {
         //
         let x = arrayArticles[indexPath.row]
         cell.descriptionTitle.text = x.getDescription()
-        cell.bidSubtitle.text = "\(x.getMinBid())"
+        if (x.getBids().count == 0) {
+            cell.bidSubtitle.text = "\(x.getMinBid())"
+        } else {
+            cell.bidSubtitle.text = "\(x.getBids()[x.getBids().count])"
+        }
+        
         return cell
     }
 

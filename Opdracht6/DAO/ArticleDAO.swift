@@ -16,12 +16,25 @@ class ArticleDAO {
     
     func getAllArticles(listener: tableProtocol) {
         db.collection("Aricles").getDocuments() { (querySnapshot, err) in
-            var documentsArray = [QueryDocumentSnapshot]()
+            var articlesArray = [Article]()
             if(err == nil) {
                 for i in (querySnapshot?.documents)! {
-                    documentsArray.append(i)
+                    // let desc = i.value(forKey: "Description")
+                    // let value = i.value as? NSDictionary
+                    let id = i.documentID
+                    let desc = i.data()["Description"] as! String
+                    let b:CFNumber = i.data()["minBid"] as! CFNumber
+                    var bidFloat: Float = 0
+                    if CFNumberGetValue(b, CFNumberType.floatType, &bidFloat) {
+                        bidFloat = Float(bidFloat)
+                    } else {
+                        bidFloat = 0
+                    }
+                    //let bids = i.data()["Bids"] as! [Bod]
+                    let a = Article(id: id, description: desc ,minBid: bidFloat)
+                    articlesArray.append(a)
                 }
-                listener.articles(documentsArray: documentsArray)
+                listener.articles(articles: articlesArray)
             }
         }
     }

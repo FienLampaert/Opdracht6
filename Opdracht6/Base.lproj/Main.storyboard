@@ -129,7 +129,7 @@
         <!--Table View Controller-->
         <scene sceneID="zIl-H8-vy2">
             <objects>
-                <tableViewController storyboardIdentifier="tableVC" id="QA7-dZ-1f9" customClass="TableViewController" customModule="Opdracht6" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tableVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QA7-dZ-1f9" customClass="TableViewController" customModule="Opdracht6" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VZq-Vj-lY3">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

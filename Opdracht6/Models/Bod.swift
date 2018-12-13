@@ -9,21 +9,21 @@
 import Foundation
 
 class Bod {
-    var bid: Double
+    var bid: Float
     var date: Date
     var member: Member
     
-    init(bid: Double, date: Date, member: Member){
+    init(bid: Float, date: Date, member: Member){
         self.bid = bid
         self.date = date
         self.member = member
     }
     
-    func getBid() -> Double {
+    func getBid() -> Float {
         return self.bid
     }
     
-    func setBid(bid: Double) {
+    func setBid(bid: Float) {
         self.bid = bid
     }
     

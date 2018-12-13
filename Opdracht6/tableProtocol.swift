@@ -11,5 +11,6 @@ import Firebase
 import FirebaseFirestore
 
 protocol tableProtocol {
-    func articles(documentsArray: [QueryDocumentSnapshot] )
+    func articles(articles: [Article])
+    func bids(bids: [Bod])
 }

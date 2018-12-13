@@ -9,9 +9,10 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController, LoginValidationProtocol {
+class ViewController: UIViewController, LoginValidationProtocol, RootVCProtocol {
 
     //let authUser = AuthenticationUser()
+    var login: Login?
     
     @IBOutlet var txtEmail: UITextField!
     @IBOutlet var txtPassword: UITextField!
@@ -41,6 +42,11 @@ class ViewController: UIViewController, LoginValidationProtocol {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableVC")
         //self.present(vc!, animated: true, completion: nil)
         self.navigationController?.pushViewController(vc!, animated: true)
+        self.setLogin(login: login!)
+    }
+    
+    func setLogin(login: Login) {
+        self.login = login
     }
     
     override func viewDidLoad() {

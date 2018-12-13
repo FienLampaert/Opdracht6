@@ -9,14 +9,24 @@
 import Foundation
 
 class Article {
+    var id: String
     var description: String
-    var minBid: Double
+    var minBid: Float
     var bids: [Bod]
     
-    init(description: String, minBid: Double){
+    init(id: String, description: String, minBid: Float){
+        self.id = id
         self.description = description
         self.minBid = minBid
         self.bids = []
+    }
+    
+    func getId() -> String {
+        return self.id
+    }
+    
+    func setId(id: String) {
+        self.id = id
     }
     
     func getDescription() -> String {
@@ -27,11 +37,11 @@ class Article {
         self.description = desc
     }
     
-    func getMinBid() -> Double {
+    func getMinBid() -> Float {
         return self.minBid
     }
     
-    func setMinBid(minBid: Double) {
+    func setMinBid(minBid: Float) {
         self.minBid = minBid
     }
     

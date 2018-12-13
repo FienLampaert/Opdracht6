@@ -27,6 +27,7 @@
 		3F39FE4B21B7C25D006944A9 /* LoginValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4A21B7C25D006944A9 /* LoginValidation.swift */; };
 		3F39FE4D21B7C7B8006944A9 /* RegistrationValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4C21B7C7B8006944A9 /* RegistrationValidationProtocol.swift */; };
 		3F39FE4F21B7C863006944A9 /* LoginValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39FE4E21B7C863006944A9 /* LoginValidationProtocol.swift */; };
+		3F43880A21C255AE00632BC3 /* RootVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43880921C255AE00632BC3 /* RootVCProtocol.swift */; };
 		3FD3C42021AE930B00D1FB7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3C41F21AE930B00D1FB7F /* GoogleService-Info.plist */; };
 		CDD459D32714829821F55445 /* Pods_Opdracht6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAFCA225316BD18FFEC5F9 /* Pods_Opdracht6.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		3F39FE4A21B7C25D006944A9 /* LoginValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidation.swift; sourceTree = "<group>"; };
 		3F39FE4C21B7C7B8006944A9 /* RegistrationValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationValidationProtocol.swift; sourceTree = "<group>"; };
 		3F39FE4E21B7C863006944A9 /* LoginValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidationProtocol.swift; sourceTree = "<group>"; };
+		3F43880921C255AE00632BC3 /* RootVCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVCProtocol.swift; sourceTree = "<group>"; };
 		3FD3C41F21AE930B00D1FB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4B7651BE9C7465EDA2BF051B /* Pods-Opdracht6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6/Pods-Opdracht6.release.xcconfig"; sourceTree = "<group>"; };
 		7CE83EFC5C84498115EF45CF /* Pods-Opdracht6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6/Pods-Opdracht6.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				3F292CD021B9212D0024F243 /* TableViewController.swift */,
 				3F26CC9B21C0FB320011DAA0 /* tableProtocol.swift */,
 				3F26CC9D21C10B890011DAA0 /* cell.swift */,
+				3F43880921C255AE00632BC3 /* RootVCProtocol.swift */,
 			);
 			path = Opdracht6;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				3F39FE4B21B7C25D006944A9 /* LoginValidation.swift in Sources */,
 				3F07E9D621AFDC35007B8B3E /* Bod.swift in Sources */,
 				3F07E9D221AFDC21007B8B3E /* Member.swift in Sources */,
+				3F43880A21C255AE00632BC3 /* RootVCProtocol.swift in Sources */,
 				3F07E9DF21AFE2B1007B8B3E /* ArticleDAO.swift in Sources */,
 				3F26CC9C21C0FB320011DAA0 /* tableProtocol.swift in Sources */,
 				3F07E9DD21AFE2A7007B8B3E /* MemberDAO.swift in Sources */,
