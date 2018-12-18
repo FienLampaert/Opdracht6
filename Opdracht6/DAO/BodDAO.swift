@@ -26,17 +26,45 @@ class BodDAO {
                             let date = i.data()["date"]
                             let member = i.data()["memberId"]
                             
-                        let bod = Bod(bid: bid as! Float, date: date as! Date, member: member as! String)
+                        let bod = Bod(id: i.documentID, bid: bid as! Float, date: date as! Date, member: member as! String)
                         bidsArray.append(bod)
                         
                         
                     }
-                    listener.bids(bids: bidsArray, row: row)
+                    listener.bids(article: article, bids: bidsArray, row: row)
                 }
                 
         })
         
 
+    }
+    
+    func getHoogsteBod(article: Article, listener: DetailProtocol) {
+        db.collection("Aricles").document(article.getId()).collection("Bids").addSnapshotListener({ (QuerySnapshot, err) in
+            if err == nil {
+                var hoogste: Float = article.getMinBid()
+                
+                for i in ((QuerySnapshot?.documents)!) {
+                    let bod = i.data()["bid"] as! Float
+                    if(bod > hoogste) {
+                        hoogste = i.data()["bid"] as! Float
+                    }
+                }
+                listener.setHoogsteBod(bod: hoogste)
+            }
+        })
+    }
+    
+    func addBod(article: Article, bod: Bod) {
+        db.collection("Aricles").document(article.getId()).collection("Bids").addDocument(data: [
+            "bid": bod.getBid(),
+            "date": bod.getDate(),
+            "memberId": bod.getMember()
+            ])
+        {
+            err in
+            
+        }
     }
     
 }

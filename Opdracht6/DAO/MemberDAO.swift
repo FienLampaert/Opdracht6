@@ -7,9 +7,17 @@
 //
 
 import Foundation
-import FirebaseAuth
+import FirebaseFirestore
 
 class MemberDAO {
 
+    let db = Firestore.firestore()
     
+    /*
+    func getMember(login: Login, listener: DetailProtocol){
+        db.collection("Members").whereField("id", isEqualTo: login.getId()).getDocuments { (QuerySnapshot, err) in
+            var member
+        }
+    }
+    */
 }

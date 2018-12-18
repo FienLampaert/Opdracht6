@@ -36,7 +36,7 @@ class RegistrationValidation {
                         if(password == passwordValidation) {
                             var leeftijd = 19
                             if(leeftijd >= 18) {
-                                login = Login(email: email, password: password)
+                                login = Login(id: "", email: email, password: password)
                                 self.createUser(login: login!, listener: listener)
                             }
                             else {
@@ -81,6 +81,7 @@ class RegistrationValidation {
         Auth.auth().createUser(withEmail: email, password: wachtwoord) { (authResult, error) in
             
             if(error == nil) {
+                login.setId(id: (authResult?.user.uid)!)
                  listener.registrationCompleted(login: login, error: "Succesvol geregistreerd")
             }
             else {

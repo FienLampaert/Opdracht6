@@ -31,6 +31,7 @@
 		3F43880A21C255AE00632BC3 /* RootVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F43880921C255AE00632BC3 /* RootVCProtocol.swift */; };
 		3FD3C42021AE930B00D1FB7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD3C41F21AE930B00D1FB7F /* GoogleService-Info.plist */; };
 		CDD459D32714829821F55445 /* Pods_Opdracht6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FAFCA225316BD18FFEC5F9 /* Pods_Opdracht6.framework */; };
+		E84A5E1F21C93835002C8088 /* DetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84A5E1E21C93835002C8088 /* DetailProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		3FD3C41F21AE930B00D1FB7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4B7651BE9C7465EDA2BF051B /* Pods-Opdracht6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6.release.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6/Pods-Opdracht6.release.xcconfig"; sourceTree = "<group>"; };
 		7CE83EFC5C84498115EF45CF /* Pods-Opdracht6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Opdracht6.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Opdracht6/Pods-Opdracht6.debug.xcconfig"; sourceTree = "<group>"; };
+		E84A5E1E21C93835002C8088 /* DetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				3F26CC9D21C10B890011DAA0 /* cell.swift */,
 				3F43880921C255AE00632BC3 /* RootVCProtocol.swift */,
 				3F0254FD21CA4913007DC7F9 /* DetailArticleViewController.swift */,
+				E84A5E1E21C93835002C8088 /* DetailProtocol.swift */,
 			);
 			path = Opdracht6;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				3F39FE4D21B7C7B8006944A9 /* RegistrationValidationProtocol.swift in Sources */,
 				3F39FE4F21B7C863006944A9 /* LoginValidationProtocol.swift in Sources */,
 				3F39FE4721B7C065006944A9 /* Login.swift in Sources */,
+				E84A5E1F21C93835002C8088 /* DetailProtocol.swift in Sources */,
 				3F07E9D421AFDC2C007B8B3E /* Article.swift in Sources */,
 				3F292CD121B9212D0024F243 /* TableViewController.swift in Sources */,
 				3F39FE4921B7C220006944A9 /* RegistrationValidtion.swift in Sources */,

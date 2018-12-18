@@ -19,7 +19,7 @@ class LoginValidation {
         
         if(!email.isEmpty) {
             if(!password.isEmpty){
-                login = Login(email: email, password: password)
+                login = Login(id: "", email: email, password: password)
                 self.signIn(login: login!, listener: listener)
             }
             else {
@@ -38,6 +38,7 @@ class LoginValidation {
         
         Auth.auth().signIn(withEmail: email, password: wachtwoord) {(user, error) in
             if(error != nil){
+                login.setId(id: (user?.user.uid)!)
                 listener.loginCompleted(login: login, error: "Succesvol aangemeld")
             }
             else {

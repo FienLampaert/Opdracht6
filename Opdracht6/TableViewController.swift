@@ -15,6 +15,7 @@ class TableViewController: UITableViewController, tableProtocol {
     
     let articleDAO = ArticleDAO()
     let bodDAO = BodDAO()
+    var login: Login?
     
     var arrayArticles = [Article]()
 
@@ -46,10 +47,11 @@ class TableViewController: UITableViewController, tableProtocol {
         }
     }
     
-    func bids(bids: [Bod], row: Int) {
+    func bids(article: Article, bids: [Bod], row: Int) {
         var hoogste: Float = 0
+        arrayArticles[row-1].bids.removeAll()
         for i in bids {
-            arrayArticles[row].addBid(bid: i)
+            arrayArticles[row-1].addBid(bid: i)
             
             if( i.bid > hoogste) {
                 hoogste = i.bid
@@ -93,6 +95,18 @@ class TableViewController: UITableViewController, tableProtocol {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        // aanmaken viewcontroller met bijhorende view
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "vcDetail") as! DetailArticleViewController
+        
+        // doorgeven van het geselecteerde artikel
+        login = (self.navigationController?.viewControllers[0] as! ViewController).getLogin()
+        vc.setContent(article: arrayArticles[indexPath.row], Login: login!)
+        
+        // navigeren naar het detailscherm
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     /*

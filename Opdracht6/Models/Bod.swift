@@ -9,14 +9,24 @@
 import Foundation
 
 class Bod {
+    var id: String
     var bid: Float
     var date: Date
     var member: String
     
-    init(bid: Float, date: Date, member: String){
+    init(id: String, bid: Float, date: Date, member: String){
+        self.id = id
         self.bid = bid
         self.date = date
         self.member = member
+    }
+    
+    func getId() -> String {
+        return id
+    }
+    
+    func setId(id: String) {
+        self.id = id
     }
     
     func getBid() -> Float {

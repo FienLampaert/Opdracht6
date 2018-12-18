@@ -49,6 +49,10 @@ class ViewController: UIViewController, LoginValidationProtocol, RootVCProtocol 
         self.login = login
     }
     
+    func getLogin() -> Login {
+        return login ?? Login(id: "", email: "",password: "")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
