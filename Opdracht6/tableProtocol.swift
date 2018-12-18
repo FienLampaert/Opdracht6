@@ -12,5 +12,5 @@ import FirebaseFirestore
 
 protocol tableProtocol {
     func articles(articles: [Article])
-    func bids(bids: [Bod])
+    func bids(bids: [Bod], row: Int)
 }

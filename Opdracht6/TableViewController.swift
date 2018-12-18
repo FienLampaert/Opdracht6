@@ -38,14 +38,25 @@ class TableViewController: UITableViewController, tableProtocol {
         }
          self.tableView.reloadData()
         
+        var j = 0
         for i in arrayArticles {
-            bodDAO.getAllBidsForAticle(article: i, listener: self)
+            j = j + 1
+            bodDAO.getAllBidsForAticle(article: i, row: j, listener: self)
+            
         }
     }
     
-    func bids(bids: [Bod]) {
+    func bids(bids: [Bod], row: Int) {
+        var hoogste: Float = 0
         for i in bids {
-            arrayArticles[0].addBid(bid: i)
+            arrayArticles[row].addBid(bid: i)
+            
+            if( i.bid > hoogste) {
+                hoogste = i.bid
+                let indexPath = IndexPath(row: row, section: 1)
+                // self.tableView.reloadData()
+                self.tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.left)
+            }
         }
     }
 

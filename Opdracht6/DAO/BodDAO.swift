@@ -14,11 +14,11 @@ class BodDAO {
     
     let db = Firestore.firestore()
     
-    func getAllBidsForAticle(article: Article, listener: tableProtocol) {
+    func getAllBidsForAticle(article: Article, row: Int, listener: tableProtocol) {
 
         db.collection("Articles").whereField("ID", isEqualTo: article.getId())
             .getDocuments() { (querySnapshot, err) in
-                if err != nil {
+                if err == nil {
                     var bidsArray = [Bod]()
 
                     for i in ((querySnapshot?.documents)!) {
@@ -26,10 +26,12 @@ class BodDAO {
                             let date = i.data()["date"]
                             let member = i.data()["memberId"]
                             
-                        let bod = Bod(bid: bid as! Float, date: date as! Date, member: member)
+                        let bod = Bod(bid: bid as! Float, date: date as! Date, member: member as! String)
+                        bidsArray.append(bod)
                         
-                        listener.bids(bids: bidsArray)
+                        
                     }
+                    listener.bids(bids: bidsArray, row: row)
                 }
                 
         }

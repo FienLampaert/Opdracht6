@@ -11,9 +11,9 @@ import Foundation
 class Bod {
     var bid: Float
     var date: Date
-    var member: Member
+    var member: String
     
-    init(bid: Float, date: Date, member: Member){
+    init(bid: Float, date: Date, member: String){
         self.bid = bid
         self.date = date
         self.member = member
@@ -35,11 +35,11 @@ class Bod {
         self.date = date
     }
     
-    func getMember() -> Member {
+    func getMember() -> String {
         return self.member
     }
     
-    func setMember(member: Member) {
+    func setMember(member: String) {
         self.member = member
     }
 }
