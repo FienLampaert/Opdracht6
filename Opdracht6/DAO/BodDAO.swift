@@ -22,13 +22,14 @@ class BodDAO {
                     var bidsArray = [Bod]()
 
                     for i in ((querySnapshot?.documents)!) {
+                        if(i.documentID != "3Ztuqklwx6Us4VtH3rSd") {
                             let bid = i.data()["bid"]
                             let date = i.data()["date"]
                             let member = i.data()["memberId"]
                             
-                        let bod = Bod(id: i.documentID, bid: bid as! Float, date: date as! Date, member: member as! String)
-                        bidsArray.append(bod)
-                        
+                            let bod = Bod(id: i.documentID, bid: bid as! Float, date: date as! Date, member: member as! String)
+                            bidsArray.append(bod)
+                        }
                         
                     }
                     listener.bids(article: article, bids: bidsArray, row: row)
