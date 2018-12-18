@@ -13,6 +13,7 @@ import FirebaseFirestore
 class ArticleDAO {
     
     let db = Firestore.firestore()
+    var listeners = [tableProtocol]()
     
     func getAllArticles(listener: tableProtocol) {
         db.collection("Aricles").addSnapshotListener( { (querySnapshot, err) in
@@ -38,8 +39,14 @@ class ArticleDAO {
                     }
                     listener.articles(articles: articlesArray)
                     }
+                
+                self.listeners.append(listener)
                     
             }
         })
+    }
+    
+    func removeListeners() {
+        listeners.removeAll()
     }
 }

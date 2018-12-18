@@ -10,4 +10,5 @@ import Foundation
 
 protocol  RootVCProtocol {
     func setLogin(login: Login)
+    func setMember(member: Member)
 }

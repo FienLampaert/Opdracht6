@@ -22,13 +22,22 @@ class TableViewController: UITableViewController, tableProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        articleDAO.getAllArticles(listener: self)
+        // articleDAO.getAllArticles(listener: self)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        articleDAO.getAllArticles(listener: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        articleDAO.removeListeners()
+        bodDAO.removeListeners()
     }
     
     func articles(articles: [Article]) {

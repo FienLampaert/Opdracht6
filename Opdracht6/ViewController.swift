@@ -13,6 +13,8 @@ class ViewController: UIViewController, LoginValidationProtocol, RootVCProtocol 
 
     //let authUser = AuthenticationUser()
     var login: Login?
+    var member = Member(id: "", username: "", password: "", birthdate: Date())
+    
     
     @IBOutlet var txtEmail: UITextField!
     @IBOutlet var txtPassword: UITextField!
@@ -39,10 +41,17 @@ class ViewController: UIViewController, LoginValidationProtocol, RootVCProtocol 
     func loginCompleted(login: Login?, error: String?) {
         lblError.text = error
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableVC")
-        //self.present(vc!, animated: true, completion: nil)
-        self.navigationController?.pushViewController(vc!, animated: true)
-        self.setLogin(login: login!)
+        if(error == "Succesvol aangemeld") {
+            if let l = login {
+                let memberDAO = MemberDAO()
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "tableVC")
+                //self.present(vc!, animated: true, completion: nil)
+                self.navigationController?.pushViewController(vc!, animated: true)
+                self.setLogin(login: login!)
+                memberDAO.getMember(login: login!, listener: self)
+            }
+        }
+        
     }
     
     func setLogin(login: Login) {
@@ -51,6 +60,15 @@ class ViewController: UIViewController, LoginValidationProtocol, RootVCProtocol 
     
     func getLogin() -> Login {
         return login ?? Login(id: "", email: "",password: "")
+    }
+    
+    func setMember(member: Member) {
+        self.member = member
+    }
+    
+    func getMemberName() -> String {
+       
+        return self.member.username
     }
     
     override func viewDidLoad() {

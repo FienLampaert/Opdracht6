@@ -52,7 +52,8 @@ class DetailArticleViewController: UIViewController, DetailProtocol, tableProtoc
     }
     
     func fillValues() {
-        lblWelkom.text = "Welkom " + login.getEmail()
+        let name = getMemberName()
+        lblWelkom.text = "Welkom " + name
         lblDescription.text = article.getDescription()
         lblMinBod.text = "Minimum bod: " + "\(article.getMinBid())"
         // bodDAO.getHoogsteBod(article: article, listener: self)
@@ -104,6 +105,10 @@ class DetailArticleViewController: UIViewController, DetailProtocol, tableProtoc
     func setHoogsteBod(bod: Float) {
         lblHoogsteBod.text = "Hoogste bod: " + "\(bod)"
         self.view.reloadInputViews()
+    }
+    
+    func getMemberName() -> String {
+        return (self.navigationController?.viewControllers[0] as! ViewController).getMemberName()
     }
     
     

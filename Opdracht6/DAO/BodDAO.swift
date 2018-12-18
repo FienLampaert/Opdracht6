@@ -4,9 +4,7 @@
 //
 //  Created by student on 29/11/18.
 //  Copyright © 2018 nielsbrackeva. All rights reserved.
-// test
-
-//test
+// 
 
 import Foundation
 import Firebase
@@ -15,6 +13,8 @@ import FirebaseFirestore
 class BodDAO {
     
     let db = Firestore.firestore()
+    var listenersTabel = [tableProtocol]()
+    var listenersDetail = [DetailProtocol]()
     
     func getAllBidsForAticle(article: Article, row: Int, listener: tableProtocol) {
 
@@ -36,9 +36,9 @@ class BodDAO {
                     }
                     listener.bids(article: article, bids: bidsArray, row: row)
                 }
-                
+            
         })
-        
+        self.listenersTabel.append(listener)
 
     }
     
@@ -56,6 +56,7 @@ class BodDAO {
                 listener.setHoogsteBod(bod: hoogste)
             }
         })
+        self.listenersDetail.append(listener)
     }
     
     func addBod(article: Article, bod: Bod) {
@@ -68,6 +69,11 @@ class BodDAO {
             err in
             
         }
+    }
+    
+    func removeListeners() {
+        listenersTabel.removeAll()
+        listenersDetail.removeAll()
     }
     
 }

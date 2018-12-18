@@ -10,8 +10,7 @@ import Foundation
 import FirebaseAuth
 
 class RegistrationValidation {
-    
-    /*
+  /*
      func login(email: String, wachtwoord: String) -> Bool {
      return true
      }
@@ -28,64 +27,69 @@ class RegistrationValidation {
         
         var error = ""
         var login: Login?
+        var member: Member?
         
         if(!name.isEmpty ) {
             if(!email.isEmpty){
                 if(!password.isEmpty){
                     if(!passwordValidation.isEmpty){
                         if(password == passwordValidation) {
-                            var leeftijd = 19
+                            let leeftijd = (Calendar.current.dateComponents([.year], from: birthDate, to: Date())).year!
+                            print(leeftijd)
                             if(leeftijd >= 18) {
+                                
                                 login = Login(id: "", email: email, password: password)
-                                self.createUser(login: login!, listener: listener)
+                                self.createUser(login: login!, username: name, birthdate: birthDate, listener: listener)
                             }
                             else {
                                 error = "Je moet ouder dan 18 jaar zijn."
-                                listener.registrationCompleted(login: login, error: error)
+                                listener.registrationCompleted(login: login, member: (member ?? nil)!, error: error)
                             }
                         }
                         else {
                             error = "Wachtwoord en wachtwoord bevestigen zijn niet gelijk aan elkaar."
-                            listener.registrationCompleted(login: login, error: error)
+                            listener.registrationCompleted(login: login, member: member, error: error)
                         }
                     }
                     else {
                         error = "Het wachtwoord bevestigen werd niet ingevuld."
-                        listener.registrationCompleted(login: login, error: error)
+                        listener.registrationCompleted(login: login, member: member, error: error)
                     }
                 }
                 else {
                     error = "Het wachtwoord werd niet ingevuld."
-                    listener.registrationCompleted(login: login, error: error)
+                    listener.registrationCompleted(login: login, member: member, error: error)
                 }
             }
             else {
                 error = "Het emailadres werd niet ingevuld."
-                listener.registrationCompleted(login: login, error: error)
+                listener.registrationCompleted(login: login, member: member, error: error)
             }
             
         }else {
             error = "De naam werd niet ingevuld."
-            listener.registrationCompleted(login: login, error: error)
+            listener.registrationCompleted(login: login, member: member, error: error)
         }
         
         
         
     }
     
-    static func createUser(login: Login, listener: RegistrationValidationProtocol) {
+    static func createUser(login: Login, username: String, birthdate: Date, listener: RegistrationValidationProtocol) {
         
         let email = login.getEmail()
         let wachtwoord = login.getPassword()
+        var member: Member?
         
         Auth.auth().createUser(withEmail: email, password: wachtwoord) { (authResult, error) in
             
             if(error == nil) {
                 login.setId(id: (authResult?.user.uid)!)
-                 listener.registrationCompleted(login: login, error: "Succesvol geregistreerd")
+                member = Member(id: (authResult?.user.uid)!, username: username, password: wachtwoord, birthdate: birthdate)
+                listener.registrationCompleted(login: login, member: member, error: "Succesvol geregistreerd")
             }
             else {
-                 listener.registrationCompleted(login: login, error: error!.localizedDescription)
+                listener.registrationCompleted(login: login, member: member, error: error!.localizedDescription)
             }
            
             //return (authResult, error)

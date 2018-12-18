@@ -11,6 +11,10 @@ import UIKit
 
 
 class RegistratieViewController: UIViewController, RegistrationValidationProtocol{
+
+    
+
+    
    
     let memberDAO = MemberDAO()
     //let regVal = RegistrationValidation()
@@ -27,6 +31,8 @@ class RegistratieViewController: UIViewController, RegistrationValidationProtoco
         let mail = txtEmail.text
         let wachtwoord = txtPassword.text
         let wachtwoordBevestiging = txtPasswordBevestig.text
+        
+        let memberDAO = MemberDAO()
         
         //print(dteGeboortedatum.date)
         
@@ -48,9 +54,17 @@ class RegistratieViewController: UIViewController, RegistrationValidationProtoco
         
     }
     
-    func registrationCompleted(login: Login?, error: String?) {
+    func registrationCompleted(login: Login?, member: Member?, error: String?) {
         lblError.text = error
-        (self.navigationController?.viewControllers[0] as! ViewController).setLogin(login: login!)
+        if (error == "Succesvol geregistreerd" ) {
+            if let l = login {
+                (self.navigationController?.viewControllers[0] as! ViewController).setLogin(login: login!)
+                
+                memberDAO.add(id: member!.id, name: member!.getUsername(), birthDate: member!.getBirthdate())
+            }
+        }
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

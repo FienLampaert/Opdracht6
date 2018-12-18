@@ -45,7 +45,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="f@l.com" borderStyle="roundedRect" placeholder="naam@hotmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-K8-ml7">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@test.com" borderStyle="roundedRect" placeholder="naam@hotmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TkR-K8-ml7">
                                 <rect key="frame" x="451" y="469" width="365" height="34"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -77,7 +77,7 @@
                                 <color key="textColor" red="0.86840187823834203" green="0.31760647000341657" blue="0.4569404915818272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="1" green="0.71592443149999996" blue="0.66942990459999996" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Fien123" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqi-x0-zQz">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test123" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qqi-x0-zQz">
                                 <rect key="frame" x="451" y="551" width="365" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -300,21 +300,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="naam@hotmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uy6-EG-m2f">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@test.com" borderStyle="roundedRect" placeholder="naam@hotmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uy6-EG-m2f">
                                 <rect key="frame" x="377" y="332" width="407" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fF-R0-0OZ">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test123" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6fF-R0-0OZ">
                                 <rect key="frame" x="377" y="418" width="407" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-4G-lTg">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test123" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyR-4G-lTg">
                                 <rect key="frame" x="377" y="508" width="407" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -349,7 +349,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-Z2-Sqq">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3g-Z2-Sqq">
                                 <rect key="frame" x="377" y="258" width="407" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -367,7 +367,6 @@
                             <constraint firstItem="Z3I-ve-p44" firstAttribute="top" secondItem="Ngy-38-RR5" secondAttribute="bottom" constant="98" id="0UV-84-4EL"/>
                             <constraint firstItem="FNS-hj-BY2" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="109" id="2aW-jB-r9M"/>
                             <constraint firstItem="JQu-R3-qz9" firstAttribute="top" secondItem="Qvr-aa-51I" secondAttribute="top" constant="262" id="43R-8v-rUb"/>
-                            <constraint firstItem="hGv-hl-UqR" firstAttribute="top" secondItem="Z3I-ve-p44" secondAttribute="bottom" constant="135" id="4j9-WA-mXc"/>
                             <constraint firstItem="Qvr-aa-51I" firstAttribute="trailing" secondItem="c3g-Z2-Sqq" secondAttribute="trailing" constant="240" id="69y-Sv-4ym"/>
                             <constraint firstItem="Qvr-aa-51I" firstAttribute="bottom" secondItem="Z3I-ve-p44" secondAttribute="bottom" constant="383" id="7Im-yl-oXz"/>
                             <constraint firstItem="ijX-IX-WUI" firstAttribute="top" secondItem="Qvr-aa-51I" secondAttribute="top" constant="33" id="7qd-qx-UV3"/>
@@ -375,18 +374,18 @@
                             <constraint firstItem="Ngy-38-RR5" firstAttribute="top" secondItem="FNS-hj-BY2" secondAttribute="bottom" constant="51" id="Krf-e4-dZq"/>
                             <constraint firstItem="c3g-Z2-Sqq" firstAttribute="top" secondItem="ijX-IX-WUI" secondAttribute="bottom" constant="65" id="LOy-UJ-cI7"/>
                             <constraint firstItem="Ngy-38-RR5" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="109" id="Mhe-vJ-pRu"/>
-                            <constraint firstItem="Qvr-aa-51I" firstAttribute="trailing" secondItem="hGv-hl-UqR" secondAttribute="trailing" constant="450" id="N8u-Zh-CyK"/>
                             <constraint firstItem="F3I-e6-311" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="109" id="PfP-Ne-KHI"/>
                             <constraint firstItem="FNS-hj-BY2" firstAttribute="top" secondItem="F3I-e6-311" secondAttribute="bottom" constant="60" id="UoH-w3-qVd"/>
                             <constraint firstItem="Z3I-ve-p44" firstAttribute="centerX" secondItem="Qvr-aa-51I" secondAttribute="centerX" id="bo3-f7-bEj"/>
-                            <constraint firstItem="hGv-hl-UqR" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="451" id="cJG-gg-jKs"/>
                             <constraint firstItem="clU-la-pYf" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="109" id="fBx-tn-Rdv"/>
                             <constraint firstItem="c3g-Z2-Sqq" firstAttribute="leading" secondItem="clU-la-pYf" secondAttribute="trailing" constant="204" id="gej-Ta-luU"/>
                             <constraint firstItem="JQu-R3-qz9" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="109" id="hzK-h4-bS9"/>
                             <constraint firstItem="Qvr-aa-51I" firstAttribute="bottom" secondItem="eWR-EI-ptf" secondAttribute="bottom" constant="78" id="iR5-WZ-Tqu"/>
                             <constraint firstItem="eWR-EI-ptf" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="86" id="jSo-89-Jcl"/>
+                            <constraint firstItem="Qvr-aa-51I" firstAttribute="bottom" secondItem="hGv-hl-UqR" secondAttribute="bottom" constant="206" id="p9k-28-cTu"/>
                             <constraint firstItem="F3I-e6-311" firstAttribute="top" secondItem="JQu-R3-qz9" secondAttribute="bottom" constant="56" id="pR5-Md-7Xx"/>
                             <constraint firstItem="clU-la-pYf" firstAttribute="top" secondItem="Qvr-aa-51I" secondAttribute="top" constant="188" id="ub4-zA-MgS"/>
+                            <constraint firstItem="hGv-hl-UqR" firstAttribute="leading" secondItem="Qvr-aa-51I" secondAttribute="leading" constant="451" id="wcd-NA-tmS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qvr-aa-51I"/>
                     </view>

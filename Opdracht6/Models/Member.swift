@@ -9,11 +9,13 @@
 import Foundation
 
 class Member {
-    var username: String
-    var password: String
-    var birthdate: Date
+    var id: String = ""
+    var username: String = ""
+    var password: String = ""
+    var birthdate: Date 
     
-    init(username: String, password: String, birthdate: Date) {
+    init(id: String, username: String, password: String, birthdate: Date) {
+        self.id = id
         self.username = username
         self.password = password
         self.birthdate = birthdate

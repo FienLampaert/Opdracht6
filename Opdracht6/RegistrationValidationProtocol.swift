@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RegistrationValidationProtocol {
-    func registrationCompleted(login: Login?, error: String?)
+    func registrationCompleted(login: Login?, member: Member?, error: String?)
 }
