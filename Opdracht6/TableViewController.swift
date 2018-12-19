@@ -53,9 +53,10 @@ class TableViewController: UITableViewController, tableProtocol {
             
             if( i.bid > hoogste) {
                 hoogste = i.bid
-                let indexPath = IndexPath(row: row, section: 1)
+                let indexPath = IndexPath(row: row, section: 0)
+                let indexPaths = [indexPath]
                 // self.tableView.reloadData()
-                self.tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.left)
+                self.tableView.reloadRows(at: indexPaths, with: UITableView.RowAnimation.left)
             }
         }
     }
@@ -81,7 +82,14 @@ class TableViewController: UITableViewController, tableProtocol {
         if (x.getBids().count == 0) {
             cell.bidSubtitle.text = "\(x.getMinBid())"
         } else {
-            cell.bidSubtitle.text = "\(x.getBids()[x.getBids().count])"
+            var hoogste: Float = 0
+            for bid in arrayArticles[indexPath.row].getBids() {
+                if(bid.getBid() > hoogste) {
+                    hoogste = bid.getBid()
+                }
+            }
+            cell.bidSubtitle.text = "\(hoogste)"
+    
         }
         
         return cell

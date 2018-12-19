@@ -16,8 +16,8 @@ class BodDAO {
     
     func getAllBidsForAticle(article: Article, row: Int, listener: tableProtocol) {
 
-        db.collection("Articles").whereField("ID", isEqualTo: article.getId())
-            .getDocuments() { (querySnapshot, err) in
+        db.collection("Aricles").document(article.getId()).collection("Bids")//
+            .addSnapshotListener ({ (querySnapshot, err) in
                 if err == nil {
                     var bidsArray = [Bod]()
 
@@ -34,7 +34,7 @@ class BodDAO {
                     listener.bids(bids: bidsArray, row: row)
                 }
                 
-        }
+        })
         
 
     }

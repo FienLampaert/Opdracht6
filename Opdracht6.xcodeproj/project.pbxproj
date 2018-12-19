@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0254FE21CA4913007DC7F9 /* DetailArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0254FD21CA4913007DC7F9 /* DetailArticleViewController.swift */; };
 		3F07E9D021AFDC14007B8B3E /* RegistratieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9CF21AFDC14007B8B3E /* RegistratieViewController.swift */; };
 		3F07E9D221AFDC21007B8B3E /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9D121AFDC21007B8B3E /* Member.swift */; };
 		3F07E9D421AFDC2C007B8B3E /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07E9D321AFDC2C007B8B3E /* Article.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		25FAFCA225316BD18FFEC5F9 /* Pods_Opdracht6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Opdracht6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0254FD21CA4913007DC7F9 /* DetailArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailArticleViewController.swift; sourceTree = "<group>"; };
 		3F07E9CF21AFDC14007B8B3E /* RegistratieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistratieViewController.swift; sourceTree = "<group>"; };
 		3F07E9D121AFDC21007B8B3E /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		3F07E9D321AFDC2C007B8B3E /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				3F26CC9B21C0FB320011DAA0 /* tableProtocol.swift */,
 				3F26CC9D21C10B890011DAA0 /* cell.swift */,
 				3F43880921C255AE00632BC3 /* RootVCProtocol.swift */,
+				3F0254FD21CA4913007DC7F9 /* DetailArticleViewController.swift */,
 			);
 			path = Opdracht6;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				3F26CC9E21C10B890011DAA0 /* cell.swift in Sources */,
 				3F07E9D021AFDC14007B8B3E /* RegistratieViewController.swift in Sources */,
 				3F07E9E121AFE2BB007B8B3E /* BodDAO.swift in Sources */,
+				3F0254FE21CA4913007DC7F9 /* DetailArticleViewController.swift in Sources */,
 				3F39FE4B21B7C25D006944A9 /* LoginValidation.swift in Sources */,
 				3F07E9D621AFDC35007B8B3E /* Bod.swift in Sources */,
 				3F07E9D221AFDC21007B8B3E /* Member.swift in Sources */,
