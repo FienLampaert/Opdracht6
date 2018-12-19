@@ -10,5 +10,4 @@ import Foundation
 
 protocol  DetailProtocol {
     func setHoogsteBod(bod: Float)
-    func bids(article: Article, bids: [Bod], row: Int)
 }

@@ -22,13 +22,6 @@ class TableViewController: UITableViewController, tableProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // articleDAO.getAllArticles(listener: self)
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,22 +40,19 @@ class TableViewController: UITableViewController, tableProtocol {
            
         }
          self.tableView.reloadData()
-        
-        let j = 0
+
         for i in arrayArticles {
-            //j = j + 1
-            bodDAO.getAllBidsForAticle(article: i, row: j, listener: self)
+            bodDAO.getAllBidsForAticle(article: i, listener: self)
             
         }
     }
     
-    func bids(article: Article, bids: [Bod], row: Int) {
+    func bids(article: Article, bids: [Bod]) {
         let row = self.arrayArticles.firstIndex(where: { (art) -> Bool in
             return art.id == article.id
         })
         
         var hoogste: Float = 0
-        // arrayArticles[row-1].getBids().removeAll()
         for i in bids {
             arrayArticles[row ?? 0].addBid(bid: i)
             

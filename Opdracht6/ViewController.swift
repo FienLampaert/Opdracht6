@@ -11,7 +11,6 @@ import Firebase
 
 class ViewController: UIViewController, LoginValidationProtocol, RootVCProtocol {
 
-    //let authUser = AuthenticationUser()
     var login: Login?
     var member = Member(id: "", username: "", password: "", birthdate: Date())
     
@@ -24,16 +23,6 @@ class ViewController: UIViewController, LoginValidationProtocol, RootVCProtocol 
         let email = txtEmail.text
         let wachtwoord = txtPassword.text
         var correct: Bool = false
-        
-        /*
-        if(email != nil && wachtwoord != nil) {
-            correct = authUser.login(email: email!, wachtwoord: wachtwoord!)
-        }
-        
-        if(correct == true) {
-            //self.navigationController?.pushViewController(UIViewController, animated: true)
-        }
- */
         
         LoginValidation.validate(email: email ?? "", password: wachtwoord ?? "", listener: self)
     }

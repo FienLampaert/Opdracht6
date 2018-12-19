@@ -16,7 +16,7 @@ class BodDAO {
     var listenersTabel = [tableProtocol]()
     var listenersDetail = [DetailProtocol]()
     
-    func getAllBidsForAticle(article: Article, row: Int, listener: tableProtocol) {
+    func getAllBidsForAticle(article: Article, listener: tableProtocol) {
 
         db.collection("Aricles").document(article.getId()).collection("Bids")//
             .addSnapshotListener ({ (querySnapshot, err) in
@@ -34,7 +34,7 @@ class BodDAO {
                         }
                         
                     }
-                    listener.bids(article: article, bids: bidsArray, row: row)
+                    listener.bids(article: article, bids: bidsArray)
                 }
             
         })

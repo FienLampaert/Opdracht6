@@ -9,12 +9,11 @@
 import Foundation
 import UIKit
 
-class DetailArticleViewController: UIViewController, DetailProtocol, tableProtocol {
+class DetailArticleViewController: UIViewController, DetailProtocol, tableProtocol {    
+
     func articles(articles: [Article]) {
         //
     }
-    
-    
     
     let memberDAO = MemberDAO()
     let bodDAO = BodDAO()
@@ -40,10 +39,7 @@ class DetailArticleViewController: UIViewController, DetailProtocol, tableProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // memberDAO.getMember(login: login, listener: self)
         self.fillValues()
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func setContent(article: Article, Login: Login) {
@@ -56,24 +52,12 @@ class DetailArticleViewController: UIViewController, DetailProtocol, tableProtoc
         lblWelkom.text = "Welkom " + name
         lblDescription.text = article.getDescription()
         lblMinBod.text = "Minimum bod: " + "\(article.getMinBid())"
-        // bodDAO.getHoogsteBod(article: article, listener: self)
-        // var hoogste = article.getMinBid()
         
-        bodDAO.getAllBidsForAticle(article: article, row: 0, listener: self)
-        
-        /*
-        for i in article.bids {
-            if( hoogste < i.getBid()) {
-                hoogste = i.getBid()
-                lblHoogsteBod.text = "Hoogste bod: " + "\(i.getBid())"
-            }
-        }
-        
-        lblBod.text = "\(hoogste + 20)"
-        */
+        bodDAO.getAllBidsForAticle(article: article, listener: self)
     }
     
-    func bids(article: Article, bids: [Bod], row: Int) {
+    func bids(article: Article, bids: [Bod]) {
+       
         article.bids = bids
         
         var hoogste: Float = article.getMinBid()

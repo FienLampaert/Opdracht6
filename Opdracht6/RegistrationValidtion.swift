@@ -10,18 +10,6 @@ import Foundation
 import FirebaseAuth
 
 class RegistrationValidation {
-  /*
-     func login(email: String, wachtwoord: String) -> Bool {
-     return true
-     }
-     
-     func registreren(email: String, wachtwoord: String, geboortedatum: String) {
-     
-     let memberDAO = MemberDAO()
-     memberDAO.registreren(email: email, wachtwoord: wachtwoord, geboortedatum: geboortedatum)
-     
-     }
-     */
     
     static func validate(name: String, email: String, password: String, passwordValidation: String, birthDate: Date, listener: RegistrationValidationProtocol){
         
@@ -92,8 +80,6 @@ class RegistrationValidation {
                 listener.registrationCompleted(login: login, member: member, error: error!.localizedDescription)
             }
            
-            //return (authResult, error)
-            
             guard let user = authResult?.user else { return }
         }
     }
