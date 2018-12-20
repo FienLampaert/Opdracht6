@@ -37,7 +37,7 @@ class LoginValidation {
         let wachtwoord = login.getPassword()
         
         Auth.auth().signIn(withEmail: email, password: wachtwoord) {(user, error) in
-            if(error != nil){
+            if(error == nil){
                 login.setId(id: (user?.user.uid)!)
                 listener.loginCompleted(login: login, error: "Succesvol aangemeld")
             }

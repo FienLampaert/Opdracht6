@@ -39,23 +39,27 @@ class TableViewController: UITableViewController, tableProtocol {
         }
          self.tableView.reloadData()
         
-        var j = 0
+        let j = 0
         for i in arrayArticles {
-            j = j + 1
+            //j = j + 1
             bodDAO.getAllBidsForAticle(article: i, row: j, listener: self)
             
         }
     }
     
     func bids(article: Article, bids: [Bod], row: Int) {
+        let row = self.arrayArticles.firstIndex(where: { (art) -> Bool in
+            return art.id == article.id
+        })
+        
         var hoogste: Float = 0
-        arrayArticles[row-1].bids.removeAll()
+        // arrayArticles[row-1].getBids().removeAll()
         for i in bids {
-            arrayArticles[row-1].addBid(bid: i)
+            arrayArticles[row ?? 0].addBid(bid: i)
             
             if( i.bid > hoogste) {
                 hoogste = i.bid
-                let indexPath = IndexPath(row: row, section: 0)
+                let indexPath = IndexPath(row: row ?? 0, section: 0)
                 let indexPaths = [indexPath]
                 // self.tableView.reloadData()
                 self.tableView.reloadRows(at: indexPaths, with: UITableView.RowAnimation.left)

@@ -73,7 +73,10 @@ class DetailArticleViewController: UIViewController, DetailProtocol, tableProtoc
     }
     
     func bids(article: Article, bids: [Bod], row: Int) {
+        article.bids = bids
+        
         var hoogste: Float = article.getMinBid()
+        
         for i in article.bids {
             if( hoogste < i.getBid()) {
                 hoogste = i.getBid()
